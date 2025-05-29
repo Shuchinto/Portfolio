@@ -638,6 +638,65 @@
     .social-link:focus svg text {
       fill: #fff !important;
     }
+
+    .footer {
+      width: 100vw;
+      background: var(--card-bg);
+      backdrop-filter: var(--glass-blur);
+      box-shadow: var(--shadow);
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      padding: 32px 0 24px 0;
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-content {
+      width: 90vw;
+      max-width: 1100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      font-family: 'sf pro display', serif;
+      color: var(--primary-color);
+      font-size: 1.1rem;
+    }
+
+    .footer-btn {
+      background: var(--accent-color);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1.08rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      font-family: 'sf pro display', serif;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+
+    .footer-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive for footer */
+    @media (max-width: 600px) {
+      .footer-content {
+        flex-direction: column;
+        gap: 12px;
+        font-size: 1rem;
+        text-align: center;
+      }
+      .footer {
+        padding: 20px 0 16px 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -678,35 +737,35 @@
     <h2>Short form</h2>
     <div class="video-grid grid-3">
       <div class="video-item short">
-        <video src="succsess_final.mp4" controls controlslist="nofullscreen"></video>
+        <video src="succsess_final.mp4" controls controlslist="nofullscreen" loading="lazy" preload="none"></video>
       </div>
       <div class="video-item short">
-        <video src="Elevenlabs_final" controls controlslist="nofullscreen"></video>
+        <video src="Elevenlabs_final.mp4" controls controlslist="nofullscreen" loading="lazy" preload="none"></video>
       </div>
       <div class="video-item short">
-        <video src="Pepsiman_final.mp4" controls controlslist="nofullscreen"></video>
-      </div>
-    </div>
-        <div class="video-grid grid-3">
-      <div class="video-item short">
-        <video src="Listary_final.mp4" controls controlslist="nofullscreen"></video>
-      </div>
-      <div class="video-item short">
-        <video src="final.1000$shit.mp4" controls controlslist="nofullscreen"></video>
-      </div>
-      <div class="video-item short">
-        <video src="fake comment_final.mp4" controls controlslist="nofullscreen"></video>
+        <video src="Pepsiman_final.mp4" controls controlslist="nofullscreen" loading="lazy" preload="none"></video>
       </div>
     </div>
         <div class="video-grid grid-3">
       <div class="video-item short">
-        <video src="cristiano_final.mp4" controls controlslist="nofullscreen"></video>
+        <video src="Listary_final.mp4" controls controlslist="nofullscreen" loading="lazy" preload="none"></video>
       </div>
       <div class="video-item short">
-        <video src="Cicada 3301_final_v1.mp4" controls controlslist="nofullscreen"></video>
+        <video src="paperfold web.mp4" controls controlslist="nofullscreen" loading="lazy" preload="none"></video>
       </div>
       <div class="video-item short">
-        <video src="BGM webfinal.mp4" controls controlslist="nofullscreen"></video>
+        <video src="fake comment_final.mp4" controls controlslist="nofullscreen" loading="lazy" preload="none"></video>
+      </div>
+    </div>
+        <div class="video-grid grid-3">
+      <div class="video-item short">
+        <video src="cristiano_final.mp4" controls controlslist="nofullscreen" loading="lazy" preload="none"></video>
+      </div>
+      <div class="video-item short">
+        <video src="Cicada 3301_final_v1.mp4" controls controlslist="nofullscreen" loading="lazy" preload="none"></video>
+      </div>
+      <div class="video-item short">
+        <video src="BGM webfinal.mp4" controls controlslist="nofullscreen" loading="lazy" preload="none"></video>
       </div>
     </div>
    
@@ -721,6 +780,7 @@
           controls 
           poster="thumbnail1.jpg"
           class="yt-style-video"
+          preload="none"
         ></video>
         <div class="yt-title">My Intro Through A Video</div>
       </div>
@@ -730,6 +790,7 @@
           controls 
           poster="thumbnail2.jpg"
           class="yt-style-video"
+          preload="none"
         ></video>
         <div class="yt-title">Long form title</div>
       </div>
@@ -741,6 +802,7 @@
           controls 
           poster="thumbnail3.jpg"
           class="yt-style-video"
+          preload="none"
         ></video>
         <div class="yt-title">Long form title</div>
       </div>
@@ -750,6 +812,7 @@
           controls 
           poster="thumbnail4.jpg"
           class="yt-style-video"
+          preload="none"
         ></video>
         <div class="yt-title">Long form title</div>
       </div>
@@ -821,6 +884,13 @@
       </a>
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      
+      <a href="https://pran41.github.io/Portfolio/" target="_blank" class="footer-btn">Visit Ceator's Portfolio</a>
+    </div>
+  </footer>
 
   <script>
     // Auto-play videos on hover
